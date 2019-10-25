@@ -3,16 +3,16 @@ import java.io.*;
 public class SingSrcShtPth{
     public static void main(String args[])
     {
-        System.out.println("enter number of vertices");
+        System.out.println("enter the number of vertices");
         Scanner sc=new Scanner(System.in);
         int v=sc.nextInt();
         int arr[][]=new int[v][v];
         for(int i=0;i<v;i++)
         for(int j=0;j<v;j++)
         arr[i][j]=0;
-        System.out.println("enter number of edges");
+        System.out.println("enter the number of edges");
         int e=sc.nextInt();
-        System.out.println("enter vertex numbers, along with edge weights");
+        System.out.println("enter the vertex numbers, along with the edge weights");
         for(int i=0;i<e;i++){
         int a=sc.nextInt();
         int b=sc.nextInt();
