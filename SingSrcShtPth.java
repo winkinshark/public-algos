@@ -26,7 +26,7 @@ public class SingSrcShtPth{
         int dest=sc.nextInt();
         System.out.println(findcost(arr,src,dest));
     }
-    static int findcost(int arr[][],int src,int dest)
+    static int findcost(int arr[][],int src,int dest)//finding cost from source to dest
     {
         int dist[]=new int[arr.length];
         Boolean vis[]=new Boolean[arr.length];
@@ -50,7 +50,7 @@ public class SingSrcShtPth{
         //return dist[dest];
         return dist[dest];
     }
-    static int findmin(Boolean vis[],int dist[])
+    static int findmin(Boolean vis[],int dist[])//finding minimum among current distances 
     {
         int min=Integer.MAX_VALUE,mind=-1;
         for(int i=0;i<dist.length;i++)
