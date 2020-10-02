@@ -3,16 +3,16 @@ import java.io.*;
 public class SingSrcShtPth{
     public static void main(String args[])
     {
-        System.out.println("enter number of vertices");
+        System.out.println("enter the number of vertices");
         Scanner sc=new Scanner(System.in);
         int v=sc.nextInt();
         int arr[][]=new int[v][v];
         for(int i=0;i<v;i++)
         for(int j=0;j<v;j++)
         arr[i][j]=0;
-        System.out.println("enter number of edges");
+        System.out.println("enter the number of edges");
         int e=sc.nextInt();
-        System.out.println("enter vertex numbers, along with edge weights");
+        System.out.println("enter the vertex numbers, along with the edge weights");
         for(int i=0;i<e;i++){
         int a=sc.nextInt();
         int b=sc.nextInt();
@@ -26,7 +26,7 @@ public class SingSrcShtPth{
         int dest=sc.nextInt();
         System.out.println(findcost(arr,src,dest));
     }
-    static int findcost(int arr[][],int src,int dest)
+    static int findcost(int arr[][],int src,int dest)//finding cost from source to dest
     {
         int dist[]=new int[arr.length];
         Boolean vis[]=new Boolean[arr.length];
@@ -50,7 +50,7 @@ public class SingSrcShtPth{
         //return dist[dest];
         return dist[dest];
     }
-    static int findmin(Boolean vis[],int dist[])
+    static int findmin(Boolean vis[],int dist[])//finding minimum among current distances 
     {
         int min=Integer.MAX_VALUE,mind=-1;
         for(int i=0;i<dist.length;i++)
